@@ -3,6 +3,10 @@ kind: Ingress
 metadata:
   name: itw-custom
 spec:
+  tls:
+  - hosts:
+    - isterryworkingtoday.com
+    secretName: itw-tls-secret
   rules:
   - host: isterryworkingtoday.com
     http:
